@@ -1,0 +1,236 @@
+body{
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+}
+*{
+    box-sizing: border-box;
+}
+
+div#wrapper{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(160deg, #020842, #28315e);
+}
+/*----------------------------------------------Container------------------------------------*/
+
+div.container{
+    position: relative;
+    top: 24%;
+    width: 80%;
+    max-width: 1400px;
+    height: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+
+}
+
+/*-----------------Console--------------------*/
+#console{
+    position: relative;
+    width: 38%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: -16px -16px rgb(84, 90, 85);
+    background-color: #ddd;
+    font-size: 1rem;
+  
+
+}
+
+div.profile{
+    padding: 20px;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Position de la photo de profil*/
+div.picture{
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    background-image: url('/img/ClemProfil\ copie.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 5%;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+div.picture:before{
+    left: -25%;
+    bottom: -63%;
+    width: 100%;
+    height: 70%;
+    content: '';
+    position: absolute;
+    background: #ddd;
+    transform: rotate(12deg);
+    -webkit-transform: rotate(12deg);
+}
+div .picture:after{
+    left: auto;
+    right: -25%;
+    bottom: -63%;
+    width: 100%;
+    height: 70%;
+    transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+    content: '';
+    position: absolute;
+    background: #ddd;
+}
+/*Bloc qui gère le texte sous la photo de profil*/
+#console div.profil_text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 220px;
+}
+
+/* Nom de famille*/
+#console .title_clem{
+    font-size: min(max(20px, 2vw), 2em);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+/* Mise en place de le navigation liens sociaux*/
+#console ul.social_link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+.social_link .bg_link{
+width: 20px;
+margin-left: 20px;
+}
+
+/* Lien Download */
+#console .download{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 65.5px);
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 1.4em;
+}
+
+/*-------------------------------------Menu de navigation-------------------------*/
+header.nav{
+    width: 4.5rem;
+    height: 20rem;
+    background-color: aliceblue;
+    border-radius: 5px;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.nav > .about{
+    width: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    justify-content: space-evenly;
+    
+}
+.nav .about li{
+    width: 100%;
+    height: 4.5em;
+}
+.nav .about li>a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.nav .about li>a>p{
+    text-align: center;
+    padding-top: 35px;
+    width: 100%;
+    height: 5em;
+}
+.nav .about .activ{
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center 40%;  
+    text-transform: uppercase;
+    filter: grayscale(100%);
+    font-size: 0.6em;
+}
+.nav .about .activ:hover{
+    filter: none;
+    color: #bd6604;
+}
+.nav .about .border{
+    border-top:1px solid ;
+    border-image-slice: 1; 
+    border-image-source:linear-gradient(160deg, transparent, #28315e 90%) ;
+   
+}
+.nav .about .about_bg{
+    background-image: url('/img/About.png');  
+}
+
+.nav .about .contact_bg{
+    background-image: url('/img/contact.png');  
+}
+
+.nav .about .works_bg{
+    background-image: url('/img/ordinateur.png');  
+}
+
+.nav .about .resume_bg{
+    background-image: url('/img/resume.png');  
+}
+
+/*------------------------------Contenu de droite-------------------------*/
+aside#content{
+    width: 60%;
+    height: 100%;
+    padding: 10px 0 ;
+}
+section#content__about{
+    width: 100%;
+    height: 100%;
+    background-color: #489092;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 15px;
+}
+#content__about .bloc_un{
+    display: flex;
+    flex-direction: row;
+}
+#content__about .bloc_un>p{
+    width: 50%;
+}
+#content__about .test{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+#content__about .test>ul{
+    width: 50%;
+}
