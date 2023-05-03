@@ -4,35 +4,63 @@ init: function() {
     app.selectElement();
 },
 
+about: document.querySelector('.about_bg'),
+resume: document.querySelector('.resume_bg'),
+contact: document.querySelector('.contact_bg'),
+
+sectionAbout: document.querySelector('.about'),
+sectionResume: document.querySelector('.resume'),
+sectionContact: document.querySelector('.contact'),
+
 
 selectElement: function(){
-const about = document.querySelector('.about_bg');
-about.addEventListener('click', app.handleClickAbout );
-const resume = document.querySelector('.resume_bg');
-resume.addEventListener('click', app.handleClickResume );
-const contact = document.querySelector('.about_bg');
-// about.addEventListener('click', app.handleClickAbout );
+app.about.addEventListener('click', app.handleClickAbout );
+app.resume.addEventListener('click', app.handleClickResume );
+app.contact.addEventListener('click', app.handleClickContact );
 },
 
 handleClickAbout: function(){
-    const sectionAbout = document.querySelector('.about');
-    const sectionResume = document.querySelector('.resume');
 
-    if(sectionResume.classList.contains('activ') === true){
-        sectionResume.classList.remove('activ')
+    if(app.sectionResume.classList.contains('activ') === true ){
+        app.sectionResume.classList.remove('activ')
     }
-    sectionAbout.classList.add('activ');
+    else if(app.resume.classList.contains('header_list-activ') === true){
+        app.resume.classList.remove('header_list-activ')
+    }
+    if(app.sectionContact.classList.contains('activ') === true){
+        app.sectionContact.classList.remove('activ')
+    }
+    else if(app.contact.classList.contains('header_list-activ') === true){
+        app.contact.classList.remove('header_list-activ')
+    }
+    app.sectionAbout.classList.add('activ' , 'fadeInLeft');
 },
 
 handleClickResume: function(){
-    const sectionAbout = document.querySelector('.about');
-    const sectionResume = document.querySelector('.resume');
 
-    if(sectionAbout.classList.contains('activ') === true){
-        sectionAbout.classList.remove('activ')
+    if(app.sectionAbout.classList.contains('activ') === true){
+        app.sectionAbout.classList.remove('activ')
     }
-    sectionResume.classList.add('activ');
-}
+    if(app.sectionContact.classList.contains('activ') === true){
+        app.sectionContact.classList.remove('activ')
+    }
+    else if(app.contact.classList.contains('header_list-activ') === true){
+        app.contact.classList.remove('header_list-activ')
+    }
+    app.sectionResume.classList.add('activ', 'fadeInLeft');
+},
+
+handleClickContact: function(){
+
+    if(app.sectionAbout.classList.contains('activ') === true){
+        app.sectionAbout.classList.remove('activ')
+    }
+    if(app.sectionResume.classList.contains('activ') === true){
+        app.sectionResume.classList.remove('activ')
+    }
+    app.sectionContact.classList.add('activ', 'fadeInLeft');
+},
+
 
 }
 

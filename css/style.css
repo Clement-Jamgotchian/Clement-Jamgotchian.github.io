@@ -5,7 +5,6 @@ body{
 *{
     box-sizing: border-box;
 }
-
 div#wrapper{
     width: 100vw;
     height: 100%;
@@ -15,7 +14,6 @@ div#wrapper{
 }
 ::-webkit-scrollbar{
     width: 10px;
-
 }
 ::-webkit-scrollbar-track {
     background: #d4d4d4;
@@ -24,7 +22,6 @@ div#wrapper{
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 5px;
-
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
@@ -44,9 +41,7 @@ div.container{
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
-
 }
-
 /*-------------------------------------Menu de navigation-------------------------*/
 header.header{
     width: 4.5rem;
@@ -70,7 +65,6 @@ header .header_list{
     padding-left: 0;
     margin: 0;
     justify-content: space-evenly;
-    
 }
 header .header_list>li{
     width: 100%;
@@ -113,19 +107,15 @@ header .header_list .border{
 header .about_bg{
     background-image: url('/img/About.png');  
 }
-
 header .contact_bg{
     background-image: url('/img/contact.png');  
 }
-
 header .works_bg{
     background-image: url('/img/ordinateur.png');  
 }
-
 header .resume_bg{
     background-image: url('/img/resume.png');  
 }
-
 /*-------------------------------------------------Profile-------------------------------------------*/
 #profil{
     position: relative;
@@ -135,9 +125,7 @@ header .resume_bg{
     box-shadow: -16px -16px rgb(84, 90, 85);
     background-color: #ddd;
     font-size: 1rem;
-    
 }
-
 #profil .profil_wrapper{
     padding: 20px;
     position: relative;
@@ -234,7 +222,6 @@ aside#content{
     width: 60%;
     height: 100%;
     padding: 15px 0 ;
-    
 }
 section.content_wrapper{
     width: 100%;
@@ -256,12 +243,9 @@ h3.content_title{
     padding: 20px;
     margin: 0;
 }
-
 h3.content_title>span{
     color: #bd6604;
-
 }
-
 .content__content{
     display: flex;
     flex-direction: column;
@@ -323,11 +307,43 @@ h3.content_title>span{
     border-image-slice: 1; 
     border-image-source:linear-gradient(160deg, rgb(40, 49, 94, 0.4) , transparent 80%); 
 }
-
 section.activ{
     display: block;
-
 }
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    }
+} 
 
 .date{
     display: inline-block;
@@ -431,3 +447,4 @@ ul.english li:nth-last-child(-n+5)::marker{
     color: #85858a6c;
 
 }
+
