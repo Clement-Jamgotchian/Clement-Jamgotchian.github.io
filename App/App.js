@@ -21,44 +21,40 @@ app.contact.addEventListener('click', app.handleClickContact );
 
 handleClickAbout: function(){
 
-    if(app.sectionResume.classList.contains('activ') === true ){
-        app.sectionResume.classList.remove('activ')
-    }
-    else if(app.resume.classList.contains('header_list-activ') === true){
-        app.resume.classList.remove('header_list-activ')
-    }
-    if(app.sectionContact.classList.contains('activ') === true){
-        app.sectionContact.classList.remove('activ')
-    }
-    else if(app.contact.classList.contains('header_list-activ') === true){
-        app.contact.classList.remove('header_list-activ')
-    }
+    app.sectionResume.classList.contains('activ') ? app.sectionResume.classList.remove('activ') : '';
+    app.resume.classList.contains('header_list-activ') ? app.resume.classList.remove('header_list-activ') : '';
+
+    app.sectionContact.classList.contains('activ') ? app.sectionContact.classList.remove('activ') : '';
+    app.contact.classList.contains('header_list-activ') ? app.contact.classList.remove('header_list-activ') : '';
+
     app.sectionAbout.classList.add('activ' , 'fadeInLeft');
+    app.about.classList.add('header_list-activ');
 },
 
 handleClickResume: function(){
 
-    if(app.sectionAbout.classList.contains('activ') === true){
-        app.sectionAbout.classList.remove('activ')
-    }
-    if(app.sectionContact.classList.contains('activ') === true){
-        app.sectionContact.classList.remove('activ')
-    }
-    else if(app.contact.classList.contains('header_list-activ') === true){
-        app.contact.classList.remove('header_list-activ')
-    }
+console.log(app.about.classList.contains('header_list-activ'));
+
+    app.sectionAbout.classList.contains('activ') ? app.sectionAbout.classList.remove('activ') : '';
+    app.about.classList.contains('header_list-activ') ? app.about.classList.remove('header_list-activ') : '';
+
+    app.sectionContact.classList.contains('activ') ? app.sectionContact.classList.remove('activ') : '';
+    app.contact.classList.contains('header_list-activ') ? app.contact.classList.remove('header_list-activ') : '';
+
     app.sectionResume.classList.add('activ', 'fadeInLeft');
+    app.resume.classList.add('header_list-activ');
 },
 
 handleClickContact: function(){
 
-    if(app.sectionAbout.classList.contains('activ') === true){
-        app.sectionAbout.classList.remove('activ')
-    }
-    if(app.sectionResume.classList.contains('activ') === true){
-        app.sectionResume.classList.remove('activ')
-    }
+    app.sectionAbout.classList.contains('activ') ? app.sectionAbout.classList.remove('activ') : '';
+    app.about.classList.contains('header_list-activ') ? app.about.classList.remove('header_list-activ') : '';
+    
+    app.sectionResume.classList.contains('activ') ? app.sectionResume.classList.remove('activ') : '';
+    app.resume.classList.contains('header_list-activ') ? app.resume.classList.remove('header_list-activ') : '';
+
     app.sectionContact.classList.add('activ', 'fadeInLeft');
+    app.contact.classList.add('header_list-activ')
 },
 
 
