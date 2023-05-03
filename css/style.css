@@ -326,7 +326,9 @@ h3.content_title>span{
 
 section.activ{
     display: block;
+
 }
+
 .date{
     display: inline-block;
     border: 1px solid rgba(129, 129, 129, 0.3);
