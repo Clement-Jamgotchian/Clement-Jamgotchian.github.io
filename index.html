@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="./App/index.js"></script>
     
     <title>Jamgotchian C</title>
 </head>
@@ -270,11 +271,29 @@
                     </section>
 
                 </section>
-                <section id="works"></section>
-                <section class="content_wrapper contact"></section>
+                <section class="content_wrapper works"></section>
+                <section class="content_wrapper contact">
+                    <section class="content__content">
+                        <h3 class="content_title"><span>C</span>ontact</h3>
+                            <div id="map"></div>
+                            <div class="testing">
+                                <ul>
+                                    <li><span>Adresse</span>......Millery, FR</li>
+                                    <li><span>Adresse</span>......Millery, FR</li>
+                                </ul>
+                                <ul>
+                                    <li><span>Adresse</span>......Millery, FR</li>
+                                    <li><span>Adresse</span>......Millery, FR</li>
+                                </ul>
+                            </div>
+                    </section>
+                </section>
             </aside>
         </div>
     </div>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyM3CTKcNK_CebFu2lr74cNScip303jCw&callback=initMap">
+</script>
     <script src="./App/App.js"></script>
 </body>
 </html>
