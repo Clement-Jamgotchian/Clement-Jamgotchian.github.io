@@ -220,6 +220,11 @@ header .resume_bg{
     text-decoration: none;
     font-size: 1.4em;
 }
+#profil .text-anim{
+    font-weight: 600;
+    color: #bd6604;
+    text-shadow: 5px 8px 4px #af650fa2,0 -2px 1px #fff;
+}
 /*------------------------------------------Contenu de droite-------------------------*/
 
 /*-------------Contenu commun aux pages content-------------- */
@@ -247,6 +252,8 @@ h3.content_title{
     border-image-source:linear-gradient(160deg,  rgb(40, 49, 94, 0.5) , transparent 80%); 
     padding: 20px;
     margin: 0;
+    text-shadow: 5px 8px 4px #af650fa2,0 -2px 1px #fff;
+
 }
 h3.content_title>span{
     color: #bd6604;
@@ -463,5 +470,5 @@ ul.english li:nth-last-child(-n+5)::marker{
 .testing > ul >li>span:first-child{
 text-transform: uppercase;
 font-weight: 500;
-margin-right: 10px;
+margin-right: 5px;
 }

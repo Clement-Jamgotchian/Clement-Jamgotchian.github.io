@@ -2,6 +2,7 @@ const app = {
 
 init: function() {
     app.selectElement();
+    app.typeAnimation();
 },
 
 about: document.querySelector('.about_bg'),
@@ -83,7 +84,15 @@ handleClickWorks: function(){
     app.works.classList.add('header_list-activ')
 },
 
+typeAnimation: function(){
 
+    const typed = new Typed(".auto-type", {
+        strings: ['en formation', 'front-end', 'React', 'Javascript'],
+        typeSpeed: 95,
+        backSpeed: 95,
+        loop: true
+    })
+}
 }
 
 document.addEventListener('DOMContentLoaded', app.init);
