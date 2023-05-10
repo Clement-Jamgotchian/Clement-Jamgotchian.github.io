@@ -268,7 +268,7 @@ section.content_wrapper{
     background-color: #d4d4d4;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    padding: 15px 30px;
+    padding: 15px 15px 15px 30px;
     line-height: 30px;
     overflow-y:scroll;
     display: none;    
@@ -331,9 +331,10 @@ h3.content_title>span{
     padding-left: 10px;
 }
 .content__content .about_me-list--text:first-child{
-    background: rgb(189, 102, 4, 0.7);
+    background: rgb(189, 102, 4, 0.6);
     padding: 0px 5px;
     color: #ffff;
+    border-radius: 5px ;
 }
 
 /*-------------------------Contenu du lien resume-------------------*/
@@ -419,22 +420,21 @@ section.activ{
     line-height: 22px;
 }
 .tech_div{
+    width: 100%;
     flex-wrap: wrap;
     border-top:1px solid ;
     border-image-slice: 1; 
     border-image-source:linear-gradient(160deg, transparent 3%, rgb(40, 49, 94, 0.5) , transparent 25%); 
 }
 .tech_img{
-    width: 100%;
+    justify-content: space-evenly;
+    width: 90%;
     flex-wrap: wrap;
     margin-bottom: 10px;
     margin-top: 20px;
 }
 .tech_img>img{
-    width: 50px;
-    margin-left: 13%;
-    margin-top: 10px;
-    
+    width: 50px;   
 }
 @counter-style check-list{
     system : cyclic;
@@ -469,10 +469,11 @@ ul.langue_liste{
 
 }
 ul.langue_liste li{
+    overflow: hidden;
     width: 25px;
 }
 
-ul.langue_liste li::marker{
+ul.langue_liste>li::marker{
     font-size: 40px;
     color:  rgb(189, 102, 4, 0.7);
     margin-right: 0px;
@@ -523,6 +524,7 @@ margin-right: 5px;
         margin: auto !important;
         width: 80% !important;
         height: 4rem !important;
+        border-radius: 5px 5px 0px 0px !important;
     }
     .header_list{
         flex-direction: row !important;
@@ -537,6 +539,9 @@ margin-right: 5px;
     .social_link{
         margin-top: 5px;
         margin-bottom: 20px;
+    }
+    .content_wrapper{
+        border-radius: 0px !important;
     }
     #profil{
         margin: auto;
@@ -572,9 +577,14 @@ margin-right: 5px;
     overflow-y: scroll;
     width: 100%;
     }
+    .content_wrapper{
+        padding: 15px 20px 0px 15px !important;
+    }
     .header{
         width: 100% !important;
         height: 4rem !important;
+        border-radius:0px !important;
+
     }
     .header_list{
         flex-direction: row !important;
@@ -582,6 +592,12 @@ margin-right: 5px;
     }
     .profil_text{
         margin-top: 200px !important;
+    }
+    .title_h4-upper{
+        font-size: 0.9em;
+    }
+    .liste{
+        font-size: 0.9em;
     }
     #profil{
         margin: auto;
