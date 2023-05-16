@@ -2,6 +2,9 @@ body{
     font-family: 'Lato', sans-serif;
     height: 100vh;
 }
+html{
+    scroll-behavior: smooth;
+}
 *{
     box-sizing: border-box;
 }
@@ -561,6 +564,21 @@ margin-right: 5px;
     #content>section{
         display: block;
     }
+    .fadeInLeft{
+        animation: none;
+    }
+    .scroll_top{
+        display: block !important;
+        position: fixed;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        bottom: 20px;
+        left: 20px;
+        z-index: 50;
+        border-radius: 99px;
+    
+    }
     
 }
 @media (max-width: 600px){
@@ -615,4 +633,7 @@ margin-right: 5px;
         height: auto !important;
     }
     
+}
+.scroll_off{
+    display: none;
 }

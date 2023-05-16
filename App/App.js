@@ -3,6 +3,14 @@ const app = {
 init: function() {
     app.selectElement();
     app.typeAnimation();
+    app.scrollButton();
+
+    window.addEventListener('scroll' , function(e){
+        if (window.scrollY == 0 ) {
+            document.getElementById('scroll').classList.add('scroll_top');
+          }
+    });
+    
 },
 
 about: document.querySelector('.about_bg'),
@@ -10,6 +18,8 @@ resume: document.querySelector('.resume_bg'),
 contact: document.querySelector('.contact_bg'),
 works: document.querySelector('.works_bg'),
 
+wrapper: document.querySelector('#wrapper'),
+scroll: document.querySelector('#scroll'),
 
 sectionAbout: document.querySelector('.about'),
 sectionResume: document.querySelector('.resume'),
@@ -22,6 +32,9 @@ app.about.addEventListener('click', app.handleClickAbout );
 app.resume.addEventListener('click', app.handleClickResume );
 app.contact.addEventListener('click', app.handleClickContact );
 app.works.addEventListener('click', app.handleClickWorks );
+
+
+app.wrapper.addEventListener('scroll', app.scrollButton);
 
 },
 
@@ -92,6 +105,17 @@ typeAnimation: function(){
         backSpeed: 95,
         loop: true
     })
+},
+
+
+scrollButton: function(event){
+
+    if(app.wrapper.scrollTop > 500){
+        app.scroll.classList.add('scroll_top');
+    } 
+    else if(app.wrapper.scrollTop < 500){
+        app.scroll.classList.remove('scroll_top');
+    }
 }
 }
 
