@@ -4,13 +4,7 @@ init: function() {
     app.selectElement();
     app.typeAnimation();
     app.scrollButton();
-
-    window.addEventListener('scroll' , function(e){
-        if (window.scrollY == 0 ) {
-            document.getElementById('scroll').classList.add('scroll_top');
-          }
-    });
-    
+    app.titleEffect();
 },
 
 about: document.querySelector('.about_bg'),
@@ -116,6 +110,38 @@ scrollButton: function(event){
     else if(app.wrapper.scrollTop < 500){
         app.scroll.classList.remove('scroll_top');
     }
+},
+
+
+titleEffect: function(){
+    const letters = "abcdefghijklmnopqrstuvwxyz";
+
+let interval = null;
+
+document.querySelector("h2").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 20);
+}
 }
 }
 
