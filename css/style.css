@@ -109,8 +109,7 @@ header .header_list-link{
     text-transform: uppercase;
     color: var(--background-color);
     border-radius: var(--border-radius);
-
-    /* filter: grayscale(100%); */
+    border-bottom:1px solid var(--lightOrange1-color) ;
     font-size: 0.6em;
 }
 header .header_list-link>p{
@@ -120,30 +119,38 @@ header .header_list-link>p{
     height: 5em;
 }
 header .header_list-activ{
-    filter: none;
-    color: var(--lightBlue-color);
-}
-header .header_list-link:hover{
-    filter: none;
     color: var(--blue-color);
     background-color: var(--orange-color);
     transform: scale(1.1);
-    
 }
-header .header_list .border{
-    border-top:1px solid var(--lightOrange1-color) ;
+header .header_list-link:hover{
+    color: var(--blue-color);
+    background-color: var(--orange-color);
+    transform: scale(1.1); 
 }
 header .about_bg{
     background-image: url('/img/About.png');  
 }
 header .contact_bg{
-    background-image: url('/img/contact.png');  
+    background-image: url('/img/contact.png'); 
 }
 header .works_bg{
     background-image: url('/img/ordinateur.png');  
 }
 header .resume_bg{
     background-image: url('/img/resume.png');  
+}
+header .about_bg:is(:hover, :focus, :active){
+    background-image: url('/img/About\ copie.png');  
+}
+header .contact_bg:hover{
+    background-image: url('/img/contact\ copie.png'); 
+}
+header .works_bg:hover{
+    background-image: url('/img/ordinateur\ copie.png');  
+}
+header .resume_bg:hover{
+    background-image: url('/img/resume\ copie.png');  
 }
 /*-------------------------------------------------Profile-------------------------------------------*/
 #profil{
@@ -162,7 +169,6 @@ header .resume_bg{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid var(--orange-color); */
     background-color: var(--content-color);
     border-radius: var(--border-radius);
     box-shadow: 0px 0px 20px var(--shadow-color);
@@ -178,7 +184,6 @@ header .resume_bg{
     background-repeat: no-repeat;
     background-position: center 5%;
     background-color: var(--profil-color);
-
     border-radius: 5px;
     overflow: hidden;
     top: 0;
@@ -584,18 +589,25 @@ margin-right: 5px;
     .header{
         margin: auto !important;
         width: 80% !important;
-        height: 4rem !important;
+        height: 5rem !important;
         border-radius: 5px 5px 0px 0px !important;
     }
     .header_list{
         flex-direction: row !important;
-        width: 80% !important;
+        width: 100% !important;
+    }
+    .header_list-link{
+        border-right: 1px solid var(--lightOrange1-color) !important;
+        border-bottom: none !important;
+        background-size: 25px !important;
     }
     .profil_text{
         margin-top: 200px !important;
+        margin-bottom: 30px;
     }
     .bg-download{
         bottom: 10px !important;
+        margin-bottom: 10px;
     }
     .social_link{
         margin-top: 5px;
@@ -662,9 +674,8 @@ margin-right: 5px;
         border-radius:0px !important;
 
     }
-    .header_list{
-        flex-direction: row !important;
-        width: 80% !important;
+    .header_list>li{
+        height: 4em !important;
     }
     .profil_text{
         margin-top: 200px !important;
