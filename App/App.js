@@ -45,6 +45,12 @@ handleClickAbout: function(){
 
     app.sectionAbout.classList.add('activ' , 'fadeInLeft');
     app.about.classList.add('header_list-activ');
+    app.about.style.backgroundImage = "url('/img/About\ copie.png')";
+    app.resume.style.backgroundImage = "url('/img/resume.png')";
+    app.contact.style.backgroundImage = "url('/img/contact.png')";
+    app.works.style.backgroundImage = "url('/img/ordinateur.png')";
+
+    
 },
 
 handleClickResume: function(){
@@ -59,7 +65,11 @@ handleClickResume: function(){
     
     app.sectionResume.classList.add('activ', 'fadeInLeft');
     app.resume.classList.add('header_list-activ');
-},
+    app.resume.style.backgroundImage = "url('/img/resume\ copie.png')";
+    app.about.style.backgroundImage = "url('/img/About.png')";
+    app.contact.style.backgroundImage = "url('/img/contact.png')";
+    app.works.style.backgroundImage = "url('/img/ordinateur.png')";
+  },
 
 handleClickContact: function(){
 
@@ -74,6 +84,11 @@ handleClickContact: function(){
     
     app.sectionContact.classList.add('activ', 'fadeInLeft');
     app.contact.classList.add('header_list-activ')
+    app.contact.style.backgroundImage = "url('/img/contact\ copie.png')";
+    app.about.style.backgroundImage = "url('/img/About.png')";
+    app.resume.style.backgroundImage = "url('/img/resume.png')";
+    app.works.style.backgroundImage = "url('/img/ordinateur.png')";
+
 },
 
 handleClickWorks: function(){
@@ -89,6 +104,11 @@ handleClickWorks: function(){
 
     app.sectionWorks.classList.add('activ', 'fadeInLeft');
     app.works.classList.add('header_list-activ')
+    app.works.style.backgroundImage = "url('/img/ordinateur\ copie.png')";
+    app.about.style.backgroundImage = "url('/img/About.png')";
+    app.resume.style.backgroundImage = "url('/img/resume.png')";
+    app.contact.style.backgroundImage = "url('/img/contact.png')";
+
 },
 
 typeAnimation: function(){

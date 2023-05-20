@@ -140,17 +140,17 @@ header .works_bg{
 header .resume_bg{
     background-image: url('/img/resume.png');  
 }
-header .about_bg:is(:hover, :focus, :active){
-    background-image: url('/img/About\ copie.png');  
+header .about_bg:hover{
+    background-image: url('/img/About\ copie.png') !important; 
 }
 header .contact_bg:hover{
-    background-image: url('/img/contact\ copie.png'); 
+    background-image: url('/img/contact\ copie.png') !important; 
 }
 header .works_bg:hover{
-    background-image: url('/img/ordinateur\ copie.png');  
+    background-image: url('/img/ordinateur\ copie.png') !important;   
 }
 header .resume_bg:hover{
-    background-image: url('/img/resume\ copie.png');  
+    background-image: url('/img/resume\ copie.png') !important;  
 }
 /*-------------------------------------------------Profile-------------------------------------------*/
 #profil{
@@ -280,7 +280,7 @@ section.content_wrapper{
     background-color: var(--content-color);
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    padding: 15px 15px 15px 30px;
+    padding: 20px 15px 20px 30px;
     line-height: 30px;
     overflow-y:scroll;
     display: none;    
@@ -321,12 +321,7 @@ h3.content_title{
 
 .content__content .about_me{
     display: flex;
-    flex-direction: row;
-}
-.content__content .about_me>p{
-    width: 50%;
-    margin: 0;
-    padding-top: 20px;
+    flex-wrap: wrap;
 }
 .content__content .about_me-list{
     display: flex;
@@ -335,13 +330,16 @@ h3.content_title{
 }
 .content__content .about_me-list>p{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 10px;
 }
-.content__content .about_me-list--text:first-child{
+.content__content .about_me-list>p>span:last-child{
+    padding-left: 10px;
+}
+.content__content .about_me-list--text{
     padding: 0px 5px 0px 10px;
     color: var(--orange-color);
-    border-radius: 5px ;
 }
 
 /*-------------------------Contenu du lien resume-------------------*/
@@ -571,6 +569,13 @@ margin-right: 5px;
   transform-origin: left;
   transform: scaleX(1);
 }
+.contact_email{
+    display: flex;
+    flex-wrap: wrap;
+}
+.testing>ul>li>span{
+    color: var(--orange-color);
+}
 /*---------------------------- Media query----------------------*/
 /*------------------------tablette-----------------*/
 @media (max-width: 1000px){
@@ -585,6 +590,9 @@ margin-right: 5px;
         #wrapper{
             position: absolute;
         overflow-y: scroll;
+        }
+        .content_wrapper{
+            overflow-y: hidden !important;
         }
     .header{
         margin: auto !important;
